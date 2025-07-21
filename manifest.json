@@ -1,0 +1,43 @@
+{
+  "id": "/",
+  "short_name": "HayJam",
+  "name": "HayJam",
+  "description": "HayJam - Where saying Hay is just dyslexic for Hey and where you can Jam with friends!",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "1280x720.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "640x960.png",
+      "sizes": "640x960",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
