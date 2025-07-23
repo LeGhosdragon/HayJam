@@ -2,11 +2,13 @@
 
 const CACHE_NAME = 'my-app-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/static/js/bundle.js', // Adjust these URLs based on your build output
-  // Add other assets you want cached
+  '/HayJam/',
+  '/HayJam/index.html',
+  '/HayJam/static/js/main.cc2a659b.js',
+  '/HayJam/static/js/453.96453769.chunk.js',
+  '/HayJam/static/css/main.f855e6bc.css',
 ];
+
 
 // Install event - cache files
 self.addEventListener('install', event => {
