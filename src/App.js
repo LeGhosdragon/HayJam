@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import InstallPrompt from './InstallPrompt'; // ✅ Import the component
 
 function App() {
   return (
