@@ -1,0 +1,42 @@
+.nav-bar {
+  position: fixed;         
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 80px;             
+  background: #222;
+  display: flex;
+  flex-direction: column;   
+  padding: 10px;
+  gap: 10px;          
+  transition: width 0.2s ease;
+}
+
+.nav-bar:hover {
+  position: fixed;          
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;            
+  background: #222;
+  display: flex;
+  flex-direction: column;   
+  padding: 10px;
+  gap: 10px;                
+}
+
+.nav-button {
+  padding: 10px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+
+.nav-button:hover {
+  background: #666;
+}

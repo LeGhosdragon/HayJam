@@ -1,0 +1,55 @@
+.message-box {
+  display: flex;
+  position: relative;
+  flex: 1;         
+  overflow-y: scroll;
+  overflow-wrap: anywhere;
+}
+
+.message {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  padding: 5px 10px;
+  margin: 5px 0;
+  color: white;
+  border-radius: 6px;
+  word-break: break-word;
+}
+
+.message-left {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+  flex-shrink: 0; 
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.text {
+
+  flex: 1 1 auto;   
+  min-width: 0;    
+  margin-left: 10px; 
+  margin-right: 10px; /* space for timestamp */
+}
+
+.timestamp {
+  flex-shrink: 0;   /* keeps its width */
+  opacity: 0;
+  font-size: 0.7em;
+  color: gray;
+  transition: opacity 0.2s ease;
+}
+
+.message:hover .timestamp {
+  opacity: 1;
+}
