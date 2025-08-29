@@ -42,11 +42,11 @@ export default function Typewriter({ text, speed = 100, deleting = false, blinki
     setCursorVisible(false);
     if(blinking)
     {
-        // const cursorBlink = setInterval(() => {
-        // setCursorVisible((v) => !v);
-        // }, 500);
-        // return () => clearInterval(cursorBlink);
-    }}, []);
+        const cursorBlink = setInterval(() => {
+        setCursorVisible((v) => !v);
+        }, 500);
+        return () => clearInterval(cursorBlink);
+    }}, [blinking]);
 
   return (
     <span>
