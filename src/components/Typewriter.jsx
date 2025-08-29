@@ -38,15 +38,15 @@ export default function Typewriter({ text, speed = 100, deleting = false, blinki
   }, [text, deleting, speed]);
 
   // blinking cursor
-  useEffect(() => {
-    setCursorVisible(false);
-    if(blinking)
-    {
-        const cursorBlink = setInterval(() => {
-        setCursorVisible((v) => !v);
-        }, 500);
-        return () => clearInterval(cursorBlink);
-    }});
+  // useEffect(() => {
+  //   setCursorVisible(false);
+  //   if(blinking)
+  //   {
+  //       const cursorBlink = setInterval(() => {
+  //       setCursorVisible((v) => !v);
+  //       }, 500);
+  //       return () => clearInterval(cursorBlink);
+  //   }}, []);
 
   return (
     <span>
