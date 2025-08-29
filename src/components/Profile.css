@@ -1,0 +1,61 @@
+.profile-page {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #1f2733;
+  border-radius: 12px;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* .login-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2a3440;
+  color: #fff;
+  font-size: 14px;
+} */
+
+/* .login-input:focus {
+  outline: none;
+  border-color: #0078ff;
+  box-shadow: 0 0 4px rgba(0, 120, 255, 0.5);
+} */
+
+.profile-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0078ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.profile-btn:hover {
+  background-color: #005fcc;
+}
+
+.errMsg {
+  color: #ff6b6b;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.successMsg {
+  color: #6bff8f;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}

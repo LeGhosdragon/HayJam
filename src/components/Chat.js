@@ -8,6 +8,7 @@ function Chat() {
   const u = [
     { username: "ChillGuy6969", txtColor: "Red", auraColor: "#3c1f49"},
   ];
+  
   const handleSend = (msg) => {
     setMessages([...messages, { id: Date.now(), text: msg }]);
   };

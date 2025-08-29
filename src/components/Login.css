@@ -1,6 +1,7 @@
 .login {
     text-Align: center;
     position: relative;
+    margin-top: 20%;
 }
 .errMsg {
     color: red;
@@ -8,9 +9,27 @@
 .login-btn {
     padding: 10px 20px;
 }
+.logSig
+{
+    display: inline-grid;
+}
 
 .login-input
 {
     padding: 8px;
     margin: 8px 0; 
+}
+
+.confirm-password {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.confirm-password.show {
+  max-height: 100px; /* enough to fit the input */
+  opacity: 1;
+  transform: translateY(0);
 }

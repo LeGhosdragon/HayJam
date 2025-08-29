@@ -1,17 +1,38 @@
 import './Dashboard.css';
 import Chat from './Chat';
 import NavBar from './NavBar';
+import Profile from './Profile';
+import { useState} from "react";
 
 // Dashboard.js
 function Dashboard({ onLogout }) {
-
+  const [toProfile, setOnWayToProfile] = useState(false);
   const userButtons = [
     { label: "Home", onClick: () => console.log("Go Home") },
-    { label: "Profile", onClick: () => console.log("Go Profile") },
+    { label: "Profile", onClick: () =>  setOnWayToProfile(true) },
     { label: "Settings", onClick: () => console.log("Go Settings") },
-    { label: "logout", onClick: ()=> onLogout()},
-    // maybe more/less depending on user
-  ];
+    { 
+    label: "Logout", 
+    onClick: () => {
+      const confirmLogout = window.confirm("Are you sure you want to Log out?");
+      if (confirmLogout) {
+        console.log("Logging out...");
+        onLogout();
+      }
+      else{
+        alert(`
+          (ノಠ益ಠ)ノ彡┻━┻
+          Bruh, you're wasting my time!
+          `);
+      }
+
+
+    }
+  },
+];
+
+
+  
 
   return (
     <div className="dashboard">
@@ -22,7 +43,12 @@ function Dashboard({ onLogout }) {
           <NavBar  buttons={userButtons}/>
         </div>
         <div className="chat-area"> 
-          <Chat />
+          {!toProfile ? 
+          (
+            <Chat /> 
+          ) : ( 
+            <Profile />
+          )}
         </div>
     </div>
   );
