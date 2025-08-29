@@ -5,7 +5,7 @@ export default function Typewriter({ text, speed = 100, deleting = false, blinki
   const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
-    let index = 0;
+    //let index = 0;
     let interval;
 
     if (!deleting) {
@@ -46,7 +46,7 @@ export default function Typewriter({ text, speed = 100, deleting = false, blinki
         setCursorVisible((v) => !v);
         }, 500);
         return () => clearInterval(cursorBlink);
-    }}, []);
+    }});
 
   return (
     <span>
