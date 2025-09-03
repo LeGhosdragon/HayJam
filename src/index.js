@@ -5,7 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-const darkMode = localStorage.getItem("darkMode") === "true";
+  const darkMode = () => {
+    const saved = localStorage.getItem("darkMode");
+    if (saved === null) return true;
+    return saved === "true";
+  };
 if (darkMode) {
   document.documentElement.classList.add("dark-theme");
 } else {
