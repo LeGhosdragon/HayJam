@@ -1,9 +1,11 @@
+/* Chat / Messages */
 .message-box {
   display: flex;
   position: relative;
   flex: 1;         
   overflow-y: scroll;
   overflow-wrap: anywhere;
+  background: var(--bg-main);
 }
 
 .message {
@@ -12,9 +14,11 @@
   align-items: flex-start;
   padding: 5px 10px;
   margin: 5px 0;
-  color: white;
+  color: var(--text-main);
+  background: var(--bg-message);
   border-radius: 6px;
   word-break: break-word;
+  transition: background 0.3s, color 0.3s;
 }
 
 .message-left {
@@ -32,10 +36,10 @@
 
 .user {
   font-weight: bold;
+  color: var(--text-main);
 }
 
 .text {
-
   flex: 1 1 auto;   
   min-width: 0;    
   margin-left: 10px; 
@@ -46,7 +50,7 @@
   flex-shrink: 0;   /* keeps its width */
   opacity: 0;
   font-size: 0.7em;
-  color: gray;
+  color: var(--text-timestamp);
   transition: opacity 0.2s ease;
 }
 

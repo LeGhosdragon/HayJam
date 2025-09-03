@@ -1,22 +1,142 @@
+/* Root and body setup */
 html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
+  color-scheme: light dark;
+  z-index: auto;
 }
+
+:root {
+  --bg-main: #f8f9fa;              
+  --text-main: #000000;            
+  --bg-nav: rgb(134, 134, 134);
+  --bg-nav-hover: rgb(120, 120, 120);
+  --bg-thread-box: rgb(134, 134, 134);
+  --bg-thread-viewer: #666;
+  --text-thread-viewer: #000;
+  --bg-thread-viewer-hover: #555;
+  --bg-button: #007bff;
+  --text-button: #000;
+  --bg-input: #fff;
+  --border-input: #ccc;
+  --success-msg: green;
+  --nav-bg: rgb(134, 134, 134);
+  --nav-btn-bg: #666;
+  --nav-btn-hover-bg: #444;
+  --nav-btn-text: #000;
+  --settings-bg: rgb(134, 134, 134);
+  --text-main: #000;
+  --toggle-bg: #ccc;
+  --toggle-thumb: #fff;
+  --toggle-checked-bg: #4caf50;
+  --dropdown-bg: #fff;
+  --dropdown-border: #ccc;
+  --btn-bg: #007bff;
+  --btn-hover-bg: #0056b3;
+  --btn-text: #000;
+  --success-color: green;
+  --profile-bg: rgb(134, 134, 134);
+  --profile-text: #000;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --input-text: #000;
+  --input-focus-border: #0078ff;
+  --input-focus-shadow: rgba(0, 120, 255, 0.5);
+  --btn-bg: #0078ff;
+  --btn-hover-bg: #005fcc;
+  --btn-text: #fff;
+  --err-color: #ff6b6b;
+  --success-color: #6bff8f;
+  --bg-thread-box: rgb(134, 134, 134);        
+  --bg-thread-viewer: #666;                   
+  --text-thread-viewer: #000;                   
+  --bg-thread-viewer-hover: #555;   
+}
+
+.light-theme {
+  --bg-main: #f8f9fa;
+  --text-main: #000000;
+  --bg-nav: rgb(134, 134, 134);
+  --bg-nav-hover: rgb(120, 120, 120);
+  --bg-thread-box: rgb(134, 134, 134);
+  --bg-thread-viewer: #666;
+  --text-thread-viewer: #000;
+  --bg-thread-viewer-hover: #555;
+  --bg-button: #007bff;
+  --text-button: #000;
+  --bg-input: #fff;
+  --border-input: #ccc;
+  --success-msg: green;
+  --bg-thread-box: rgb(134, 134, 134);        
+  --bg-thread-viewer: #666;                   
+  --text-thread-viewer: #000;                   
+  --bg-thread-viewer-hover: #555;              
+
+}
+
+.dark-theme {
+  --bg-main: #282c34;
+  --text-main: #ffffff;
+  --bg-nav: #222;
+  --bg-nav-hover: #333;
+  --bg-thread-box: #222;
+  --bg-thread-viewer: #444;
+  --text-thread-viewer: #fff;
+  --bg-thread-viewer-hover: #555;
+  --bg-button: #4caf50;
+  --text-button: #fff;
+  --bg-input: #555;
+  --border-input: #888;
+  --success-msg: #7fff7f;
+  --nav-bg: #222;
+  --nav-btn-bg: #444;
+  --nav-btn-hover-bg: #666;
+  --nav-btn-text: #fff;
+  --settings-bg: #222;
+  --text-main: #fff;
+  --toggle-bg: #555;
+  --toggle-thumb: #fff;
+  --toggle-checked-bg: #4caf50;
+  --dropdown-bg: #333;
+  --dropdown-border: #555;
+  --btn-bg: #0078ff;
+  --btn-hover-bg: #0056b3;
+  --btn-text: #fff;
+  --success-color: lightgreen;
+  --profile-bg: #222;
+  --profile-text: #fff;
+  --input-bg: #2a3440;
+  --input-border: #444;
+  --input-text: #fff;
+  --input-focus-border: #0078ff;
+  --input-focus-shadow: rgba(0, 120, 255, 0.5);
+  --btn-bg: #0078ff;
+  --btn-hover-bg: #005fcc;
+  --btn-text: #fff;
+  --err-color: #ff6b6b;
+  --success-color: #6bff8f;
+  --bg-thread-box: #222;                        
+  --bg-thread-viewer: #444;                     
+  --text-thread-viewer: #fff;                   
+  --bg-thread-viewer-hover: #555;               
+}
+
+
 
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 0; 
+  min-height: 0;
   height: 100vh;
   max-height: 100vh;
-  background-color: #282c34;
- 
-  color: white;
+  color: var(--text-main);
+  background-color: var(--bg-main);
 }
 
+
 body {
-  background: #182028;
+  background: var(--bg-main);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,16 +144,7 @@ body {
   margin: 0;
 }
 
-h1 {
-  font-size: 9vmin;
-  color: #8bf;
-  text-align: left;
-  font-family: Lato, sans-serif;
-  font-weight: 700;
-  margin: 1rem 0 1rem 2rem;
-}
 
-/* Typewriter effect 1 */
 @keyframes typing {
   0.0000%, 27.3488% { content: "L"; }
   1.1395%, 26.2093% { content: "Lo"; }
@@ -78,7 +189,6 @@ h1 {
   border-right: 0;
 }
 
-
 @media (prefers-reduced-motion) {
   .typewriter::after {
     animation: none;
@@ -97,14 +207,13 @@ h1 {
   }
 }
 
-/**/
 .loading-screen {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #182028;
-  color: white;
+  color: var(--text-loading);
+  background-color: var(--bg-loading);
   font-size: 2rem;
   font-family: sans-serif;
 }

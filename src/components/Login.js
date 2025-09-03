@@ -51,7 +51,7 @@ function Login({ onLoginSuccess }) {
 
       //ADD SIGNUP THINGY
       alert(`User ${username} signed up successfully!`);
-       localStorage.setItem("username", username);
+      localStorage.setItem("username", username);
       onLoginSuccess();
     }
   };

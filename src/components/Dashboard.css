@@ -15,6 +15,7 @@ header {
 }
 
 .chat-area {
+  align-items: center;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -49,4 +50,9 @@ header {
   overflow-wrap: anywhere;
   margin-left: 220px;
   width: calc(100% - 220px);
+}
+
+.navbar:hover
+{
+  width: 200px;
 }

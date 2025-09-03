@@ -54,7 +54,7 @@ function Profile() {
             placeholder={localStorage.getItem("username")}
             onChange={(e) => setUsername(e.target.value)}
             required
-            className="login-input"
+            className="-input"
           />
         </label>
 
@@ -65,7 +65,7 @@ function Profile() {
             value={password}
             placeholder="Enter new password"
             onChange={(e) => setPassword(e.target.value)}
-            className="login-input"
+            className="-input"
           />
         </label>
 
@@ -76,7 +76,7 @@ function Profile() {
             value={confirmPassword}
             placeholder="Confirm new password"
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="login-input"
+            className="-input"
           />
         </label>
 

@@ -1,0 +1,89 @@
+/* ================== Forum / Threads ================== */
+.thread-box {        
+  background: var(--bg-thread-box);
+  display: flex;
+  flex-direction: column;   
+  padding: 10px;
+  gap: 12px;      
+  overflow-y: auto;
+  text-align: justify;  
+  height: 75%;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.forum-page {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thread-viewer {
+  padding: 12px 15px;
+  background: var(--bg-thread-viewer);
+  color: var(--text-thread-viewer);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.thread-viewer:hover {
+  background: var(--bg-thread-viewer-hover);
+  transform: translateY(-2px);
+}
+
+.thread-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thread-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.thread-title:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px;
+  transition: transform 0.2s;
+}
+
+.thread-viewer.expanded .arrow {
+  transform: rotate(90deg);
+}
+
+.thread-resume {
+  margin: 5px 0 10px 20px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.thread-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-left: 20px;
+}
+
+.thread-description {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}

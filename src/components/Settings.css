@@ -1,0 +1,89 @@
+/* Settings Page */
+.Settings-page {
+  max-width: 400px;
+  margin: 50px auto;
+  background: var(--settings-bg);
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  color: var(--text-main);
+}
+
+.settings-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.settings-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: var(--toggle-bg);
+  transition: 0.4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: var(--toggle-thumb);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background: var(--toggle-checked-bg);
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.dropdown {
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--dropdown-border);
+  background: var(--dropdown-bg);
+  color: var(--text-main);
+}
+
+
+.slider-range {
+  width: 150px;
+}
+
+.Settings-btn {
+  padding: 10px;
+  background: var(--btn-bg);
+  border: none;
+  border-radius: 8px;
+  color: var(--btn-text);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Settings-btn:hover {
+  background: var(--btn-hover-bg);
+}
