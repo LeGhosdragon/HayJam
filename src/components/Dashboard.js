@@ -17,8 +17,9 @@ function Dashboard({ onLogout }) {
     { label: "Homelander's big butt cave", onClick: () => {
         const confirmLogout = window.confirm(`Are you sure you want to Enter his
           BIG BUTT CAVE ?`); 
-        setDestinationFalse();
-        setOnWayToChat(true); }},
+        setDestinationFalse(); if(confirmLogout)
+        {
+        setOnWayToChat(true);} }},
     { label: "Poopoo user", onClick: () =>  {
       setDestinationFalse();
         setOnWayToChat(true); 
