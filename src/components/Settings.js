@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 function Settings() {
 
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("darkMode") === "true";
+    const saved = localStorage.getItem("darkMode");
+    if (saved === null) return true;
+    return saved === "true";
   });
   const [notifications, setNotifications] = useState(() => {
     return localStorage.getItem("notifications") === "true";
