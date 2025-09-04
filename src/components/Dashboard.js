@@ -44,9 +44,45 @@ function Dashboard({ onLogout }) {
     },
   ];
 
-  const currentThreads = [
-    // ... your threads array remains unchanged ...
+ const currentThreads = [
+    { tName: "ButtKickNation", 
+      active: "01213412",
+      shortResume:"This is what a short resume of this thread is supposed to look like, brief and simple !",
+      threadAge: "2020-01-22",
+      description: "this is a very long description, this is a very long description this is a very long description this is a very long description this is a very long description this is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long description this is a very long description, this is a very long description this is a very long description this is a very long description this is a very long description this is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long description this is a very long description, this is a very long description this is a very long description this is a very long description this is a very long description this is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long description, this is a very long description this is a very long description this is a very long description this is a very long description this is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long description this is a very long description, this is a very long description this is a very long description this is a very long description this is a very long description this is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long description", 
+    },
+    { tName: "Jolene's Gardeners", 
+      active: "01213412",
+      shortResume:"This is what a short resume of this thread is supposed to look like, brief and simple !",
+      threadAge: "2020-01-22",
+      description: "this is a very long description, this is a very long description this is a very long description this is a very long description this is a very long description this is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long description", 
+    },
+    { tName: "Does Bruno Mars is gay ?", 
+      active: "696969",
+      shortResume:"Bruno Mars is gay is the most discussed in the media in the few years ago. Even it has happened in 2012, but some of the public still curious about what is exactly happening and to be the reason there is a rumor comes out about his gay. At that time he became the massive social networking rumor.",
+      threadAge: "2012-05-13",
+      description: "The public, especially his fans are shocked. He just came out with his bad rumor which is spread massively. This time is not about his music career, but his bad rumor. The rumor is out of standardize of hoax, according the last reported this singer revealed himself as homosexual. Do you still believe or not, this rumor is really much talked by people even in a person of his fans.", 
+    },
+        { tName: "ButtKickNation", 
+      active: "01213412",
+      shortResume:"This is what a short resume of this thread is supposed to look like, brief and simple !",
+      threadAge: "2020-01-22",
+      description: "this is a very long description, this is a very long description this is a very long description this is a very long description this is a very long description this is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long description", 
+    },
+    { tName: "Jolene's Gardeners", 
+      active: "01213412",
+      shortResume:"This is what a short resume of this thread is supposed to look like, brief and simple !",
+      threadAge: "2020-01-22",
+      description: "this is a very long description, this is a very long description this is a very long description this is a very long description this is a very long description this is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long descriptionthis is a very long description", 
+    },
+    { tName: "Does Bruno Mars is gay ?", 
+      active: "696969",
+      shortResume:"Bruno Mars is gay is the most discussed in the media in the few years ago. Even it has happened in 2012, but some of the public still curious about what is exactly happening and to be the reason there is a rumor comes out about his gay. At that time he became the massive social networking rumor.",
+      threadAge: "2012-05-13",
+      description: "The public, especially his fans are shocked. He just came out with his bad rumor which is spread massively. This time is not about his music career, but his bad rumor. The rumor is out of standardize of hoax, according the last reported this singer revealed himself as homosexual. Do you still believe or not, this rumor is really much talked by people even in a person of his fans.", 
+    },
   ];
+
 
   function setDestinationFalse() {
     setOnWayToHome(false);
