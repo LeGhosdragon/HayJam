@@ -10,7 +10,7 @@
   padding: 10px;
   gap: 10px;
   transition: width 0.2s ease;
-  overflow: visible; /* allow tooltip to escape */
+  overflow: visible; 
 }
 
 .nav-items {
@@ -45,7 +45,6 @@
   transition: all 0.3s ease;
 }
 
-/* Tooltip */
 .tooltip {
   background: var(--nav-btn-bg);
   color: var(--nav-btn-text);

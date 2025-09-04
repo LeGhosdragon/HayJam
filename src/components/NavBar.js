@@ -11,7 +11,7 @@ function NavBar({ buttons, userButtons }) {
     setTooltip({
       text: label,
       top: rect.top,
-      left: rect.right + 5, // slightly outside nav-bar
+      left: rect.right + 5, 
     });
   };
 

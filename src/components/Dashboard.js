@@ -5,13 +5,17 @@ import NavBar from './NavBar';
 import Profile from './Profile';
 import { useState } from "react";
 import Forum from './Forum';
+import Home from './Home';
+import Friends from './Friends';
 
 // Dashboard.js
 function Dashboard({ onLogout }) {
   const [toProfile, setOnWayToProfile] = useState(false);
+  const [toForum, setOnWayToForum] = useState(false);
   const [toChat, setOnWayToChat] = useState(false);
   const [toHome, setOnWayToHome] = useState(false);
   const [toSettings, setOnWayToSettings] = useState(false);
+  const [toFriends, setOnWayToFriends] = useState(false);
 
   const userButtons = [
     { label: "Homelander's big butt cave", onClick: () => {
@@ -25,7 +29,9 @@ function Dashboard({ onLogout }) {
   ];
 
   const buttons = [
-    { label: "Home but actually forumadwwadwdawdawdawdwa aw dawd w ad wa ", onClick: () => { setDestinationFalse(); setOnWayToHome(true); }},
+    { label: "Home", onClick: () => { setDestinationFalse(); setOnWayToHome(true); }},
+    { label: "Forum", onClick: () => { setDestinationFalse(); setOnWayToForum(true); }},
+    { label: "Friends", onClick: () => { setDestinationFalse(); setOnWayToFriends(true); }},
     { label: "Profile", onClick: () =>  { setDestinationFalse(); setOnWayToProfile(true); }},
     { label: "Settings", onClick: () => { setDestinationFalse(); setOnWayToSettings(true); }},
     { 
@@ -86,8 +92,10 @@ function Dashboard({ onLogout }) {
 
   function setDestinationFalse() {
     setOnWayToHome(false);
+    setOnWayToForum(false);
     setOnWayToProfile(false);
     setOnWayToSettings(false);
+    setOnWayToFriends(false);
     setOnWayToChat(false);
   }
 
@@ -99,9 +107,11 @@ function Dashboard({ onLogout }) {
       </div>
       <div className="chat-area"> 
         {toProfile && <Profile />}
-        {toHome && <Forum threads={currentThreads}/>}
+        {toForum && <Forum threads={currentThreads}/>}
+        {toHome && <Home />}
         {toSettings && <Settings />}
         {toChat && <Chat />}
+        {toFriends && <Friends />}
       </div>
     </div>
   );
