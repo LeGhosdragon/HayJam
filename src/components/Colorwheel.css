@@ -1,0 +1,20 @@
+/* ColorWheel.css */
+.color-wheel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.preview {
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #fff;
+}

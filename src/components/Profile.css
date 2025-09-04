@@ -1,63 +1,173 @@
+/* Profile Page Layout */
 .profile-page {
-  max-width: 400px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: var(--profile-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+  background: var(--bg-main);
+  color: var(--text-main);
+  box-sizing: border-box;
+  top: 0;
+}
+
+/* Flair (banner + avatar) */
+.user-flair {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-thread-box);
   border-radius: 12px;
-  color: var(--profile-text);
-  font-family: 'Lato', sans-serif;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 80%;
+  max-width: 700px;
 }
 
-.profile-form label {
-  display: block;
-  margin-bottom: 1rem;
-  font-weight: 500;
+/* Avatar */
+.image-container {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-alt);
 }
-
-.-input {
+.user-avatar {
   width: 100%;
-  padding: 10px 12px;
-  margin-top: 5px;
-  border-radius: 8px;
-  border: 1px solid var(--input-border);
-  background: var(--input-bg);
-  color: var(--input-text);
-  font-size: 14px;
+  height: 100%;
+  object-fit: cover;       /* Ensures the image fills the circle without distortion */
+  object-position: center; /* Centers the image inside the circle */
+  border-radius: 50%;      /* Keep the circular shape */
+  display: block;          /* Removes extra spacing for inline images */
 }
 
-.-input:focus {
-  outline: none;
-  border-color: var(--input-focus-border);
-  box-shadow: 0 0 4px var(--input-focus-shadow);
+
+/* Username Banner */
+.user-banner {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-.profile-btn {
-  margin-top: 1rem;
-  width: 100%;
-  padding: 10px;
+.username-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-main);
+  margin: 0;
+  font-family: emoji;
+}
+.username-id-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-main);
+  margin: 0;
+}
+.example-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* Rules Box */
+.rules-box {
+  background: var(--bg-thread-box);
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  min-height: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Color button next to username */
+.color-btn {
+  background: none;
   border: none;
-  border-radius: 8px;
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
-  font-size: 16px;
   cursor: pointer;
-  transition: background 0.2s;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  transition: transform 0.2s ease;
 }
 
-.profile-btn:hover {
-  background-color: var(--btn-hover-bg);
+.color-btn:hover {
+  transform: scale(1.1);
+  color: var(--accent);
 }
 
-
-.errMsg {
-  color: var(--err-color);
-  font-weight: 500;
-  margin-bottom: 1rem;
+/* Popup colorwheel above other elements */
+.colorwheel-popup {
+  position: absolute;
+  margin-top: 50px; /* adjust so it sits nicely below username */
+  z-index: 2000;
+  background: var(--bg-thread-box);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.avatar-editor-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center; /* center image horizontally */
+  align-items: center;     /* center image vertically */
+  border: 2px dashed #aaa;
+  background: #f0f0f0;
 }
 
-.successMsg {
-  color: var(--success-color);
-  font-weight: 500;
-  margin-bottom: 1rem;
+.avatar-editor-circle img {
+  position: absolute;       /* allows free movement with transform */
+  top: 50%;                 /* start at circle center */
+  left: 50%;                /* start at circle center */
+  transform: translate(-50%, -50%) scale(1); /* centered and scaled */
+  cursor: grab;
+  user-select: none;
+}
+
+.avatar-editor-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.avatar-editor-popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-editor-popup img {
+  user-select: none;
+}
+
+.avatar-editor-controls {
+  display: flex;
+  gap: 10px;
 }
 

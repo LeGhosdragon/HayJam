@@ -1,30 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MessageBar from "./MessageBar";
 import "./Chat.css"; 
+import defaultAvatar from "../assets/default-pfp.png"; 
 
 function Chat() {
   const [messages, setMessages] = useState([]);
+  const [avatar, setAvatar] = useState(defaultAvatar); // track avatar locally
 
-  const u = [
-    { username: "ChillGuy6969", txtColor: "Red", auraColor: "#3c1f49"},
-  ];
-  
+  const defaultTextColor = "hsl(200, 100%, 50%)";
+  const defaultBannerColor = "hsl(200, 50%, 80%)";
+
+  const [username] = useState(() => localStorage.getItem("username") || "Guest");
+
+  // Load avatar from localStorage when component mounts
+  useEffect(() => {
+    const savedAvatar = localStorage.getItem("avatar");
+    if (savedAvatar) setAvatar(savedAvatar);
+  }, []);
+
+  // Update localStorage whenever avatar changes
+  useEffect(() => {
+    localStorage.setItem("avatar", avatar);
+  }, [avatar]);
+
   const handleSend = (msg) => {
     setMessages([...messages, { id: Date.now(), text: msg }]);
+  };
+
+  // Example function to update avatar (e.g., from file input)
+  const handleAvatarChange = (newAvatarUrl) => {
+    setAvatar(newAvatarUrl);
   };
 
   return (
     <div style={{ position: "absolute", right: 0, left: 0, bottom: 0 }}>
       <div
         className="message-box"
-        style={{display: "block",position: "relative",overflowY: "auto",height: "72.7vh"}}
+        style={{ display: "block", position: "relative", overflowY: "auto", height: "72.7vh" }}
       >
         {messages.map((m) => (
-          <p className="message" style={{ background: u[0].auraColor }}>
+          <p key={m.id} className="message" style={{ background: defaultBannerColor }}>
             <span className="message-left">
-              <img src="your-avatar.png" alt="avatar" className="avatar" />
-              <span className="user" style={{ color: u[0].txtColor }}>
-                {u[0].username}
+              <img
+                src={avatar}
+                alt="avatar"
+                className="avatar"
+                onError={(e) => e.target.src = defaultAvatar} // fallback
+              />
+              <span className="user" style={{ color: defaultTextColor }}>
+                {username}
               </span>
             </span>
             <span className="text">{m.text}</span>
@@ -37,12 +61,12 @@ function Chat() {
               {String(new Date(m.id).getSeconds()).padStart(2, "0")}
             </span>
           </p>
-
-
         ))}
       </div>
       <div style={{ position: "relative", right: 0, left: 0, bottom: 0 }}>
         <MessageBar onSend={handleSend} />
+        {/* Example input to change avatar */}
+        {/* <input type="file" onChange={(e) => handleAvatarChange(URL.createObjectURL(e.target.files[0]))} /> */}
       </div>
     </div>
   );
