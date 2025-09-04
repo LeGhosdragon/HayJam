@@ -27,10 +27,7 @@ function Chat() {
     setMessages([...messages, { id: Date.now(), text: msg }]);
   };
 
-  // Example function to update avatar (e.g., from file input)
-  const handleAvatarChange = (newAvatarUrl) => {
-    setAvatar(newAvatarUrl);
-  };
+
 
   return (
     <div style={{ position: "absolute", right: 0, left: 0, bottom: 0 }}>
